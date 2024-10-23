@@ -43,12 +43,14 @@ You can find information on this easily online.)
   Note: If you prefer, you can use new HAK5 PayloadStudio Community Edition to encode the payload.txt file. <a href="https://payloadstudio.com/community/">LINK</a>
 * Insert inject.bin file into your SD card.
 * Place SD Card into your Rubber-Ducky, sit back and watch!
+  
+### I TAKE NO RESPONSABILITY FOR ANY ILLEGAL USE OF THIS TOOL. BE SMART. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Contributing
+## Author
 
-luckyman6
+<a href="https://github.com/luckyman6">luckyman6</a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
